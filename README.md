@@ -1,6 +1,6 @@
 # Portal emBritânia
 
-Este projeto é um site desenvolvido em **ASP.NET MVC** no ano de 2016, com o objetivo de divulgar o turismo e o comércio local da cidade de Britânia - GO. 
+Este projeto é um portal desenvolvido em **ASP.NET MVC** no ano de 2016, com o objetivo de divulgar o turismo e o comércio local da cidade de Britânia - GO. 
 
 Na época, atuava como empreendedor no ramo de hotelaria e alimentação na cidade e idealizei este portal como uma vitrine digital para valorizar os atrativos turísticos, festas, gastronomia e opções de hospedagem, além de abrir espaço de divulgação para outros estabelecimentos locais.
 
