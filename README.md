@@ -19,14 +19,6 @@ O portal serviu como ferramenta de marketing, ampliando a visibilidade do restau
 - Página individual de cada hotel com fotos, informações detalhadas, lista de comodidades e formulário de contato para consulta de disponibilidade.
 - Estrutura responsiva para acesso em dispositivos móveis e desktops.
 
-## Imagens do Projeto
-
-### Página Inicial
-![Página Inicial](docs/home.png)
-
-### Página de Hospedagem
-![Página de Hospedagem](docs/hospedagem.png)
-
 ## Estrutura do Projeto
 
 - **EmBritania.Dominio/** – Camada de domínio: contém classes de negócio, entidades e lógica central que representam os conceitos-chave da aplicação (turismo, hospedagem, estabelecimento, etc.).
@@ -35,6 +27,22 @@ O portal serviu como ferramenta de marketing, ampliando a visibilidade do restau
 ### Tecnologias e Arquivos Adicionais
 - **CSS, JavaScript, HTML e C#** – Linguagens predominantes no projeto, distribuídas entre os arquivos estáticos, scripts client-side, Views e lógica C# do backend.
 - **Estrutura MVC clássica** – Controllers, Views (Razor), Models (na camada de domínio) e recursos estáticos devem estar organizados conforme boas práticas ASP.NET MVC, mesmo que os diretórios específicos não estejam visíveis na visão geral.
+
+## Imagens do Projeto
+
+### Página Inicial
+![Página Inicial](docs/home.png)
+
+### Página de Hospedagem
+![Página de Hospedagem](docs/hospedagem.png)
+
+###  Visualização Histórica
+
+O portal original **embritania.com.br**, que esteve ativo de 2016 a 2022 como vitrine digital de turismo e comércio local, pode ser acessado via página arquivada do Wayback Machine:
+
+- **Arquivo de dezembro de 2016**: [embritania.com.br em 20-dez-2016 (Wayback Machine)](https://web.archive.org/web/20161220124702/http://embritania.com.br/)
+
+Este link permite revisitar o site como ele era em dezembro de 2016, oferecendo um panorama histórico valioso para compreender o layout, conteúdos e funcionamento da época.
 
 ---
 
