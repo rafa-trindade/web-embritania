@@ -1,0 +1,242 @@
+﻿@{
+    Layout = "../Shared/_LayoutEventos.cshtml";
+}
+
+@model EmBritania.Web.Models.EventosViewModel
+@using EmBritania.Web.HtmlHelpers
+
+<section class="parallax-window" data-parallax="scroll" data-image-src="../../img/bg_blog.jpg" data-natural-width="1400" data-natural-height="470">
+    <div class="parallax-content-1">
+        <div class="animated fadeInDown">
+            <h1>Em Britânia: Agenda</h1>
+            <p>Shows, Festas, Eventos.. Fique por dentro do que acontece em Britânia.</p>
+        </div>
+    </div>
+</section><!-- End section -->
+
+<div id="position">
+    <div class="container">
+        <ul>
+            <li>@Html.ActionLink("Em Britânia", "Index", "Home")</li>
+            <li>@Html.ActionLink("Eventos", "ListaEventos", "Eventos")</li>
+            <li>Listar Todos</li>
+        </ul>
+    </div>
+</div><!-- End position -->
+
+<div class="collapse" id="collapseMap">
+    <div id="map" class="map"></div>
+</div><!-- End Map -->
+
+<div class="container margin_60">
+
+    <div class="row">
+
+
+        <div class="col-md-9">
+
+            @foreach (var evento in Model.Eventos.Where(s => s.Status == "ATIVO"))
+            {
+
+                <div class="box_style_9" id="@evento.Storage">
+                    <div class="row">
+                        <div class="post">
+                            <div class="col-lg-3 col-md-3">
+
+
+                                <a href="#" title="@evento.Titulo.ToUpper()"><img src="~/storage/evento/@evento.Storage/thumb.jpg" alt="Image" class="img-thumbnail" @*style="max-width: 110%;"*@></a>
+
+                            </div>
+
+                            <div class="col-lg-9 col-md-9" style="padding-right: 40px;padding-top: 5px; padding-bottom: 20px; padding-left:40px">
+
+
+
+                                <div class="post_info clearfix" style="border-top:none;  padding: 0">
+                                    <div class="post-left">
+                                        <h4 style="">@evento.Titulo</h4>
+
+                                    </div>
+                                </div>
+
+
+
+                                <ul style="list-style-type:none; padding:0">
+                                    <li><i class="icon-th-list"></i><strong>Categoria: </strong><span style="color: #3b537b">@evento.CategoriaEvento.DescricaoCategoria</span></li>
+                                    <li><i class="icon-calendar"></i><strong>Quando: </strong><span style="color: #3b537b">@evento.DataEvento</span></li>
+                                    <li><i class="icon-location"></i><strong>Onde: </strong><span style="color: #3b537b">@evento.LocalEvento.NomeLocal</span></li>
+                                    <li><i class="icon-money-2"></i><strong>Quanto: </strong><span style="color: #3b537b">@evento.TipoEvento.DescricaoTipo</span></li>
+                                </ul>
+
+                                <a class="btn_1" data-toggle="collapse" data-parent="#accordion" href="#@evento.Id" aria-expanded="false">Detalhes</a>
+                                @*@Html.ActionLink("Detalhes", "Detalhes", "Eventos", new { id = evento.EventoId, evento = evento.Titulo.Trim().ToSeoUrl() }, new { @class = "btn_1" })*@
+
+
+
+
+                            </div>
+                        </div><!-- end post -->
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-default">
+
+                                    <div id="@evento.Id" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                        <div class="panel-body" style="padding-top: 5px; padding-bottom:5px">
+                                            <div class="post_info clearfix" style="padding: 5px">
+                                                <div class="main_title" style="margin-bottom: 10px">
+                                                    <h4><span><i class="icon-info-circled-3"></i></span> Detalhes</h4>
+                                                </div>
+                                            </div>
+
+                                            @Html.Raw(evento.HtmlDetalhes)
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div><!-- end box style -->
+
+            }
+
+
+            @foreach (var evento in Model.EventosDesc.Where(s => s.Status == "INATIVO"))
+            {
+
+                <div class="div_inativo">
+                    <div class="box_style_9">
+                        <div class="row">
+                            <div class="post">
+                                <div class="col-lg-3 col-md-3">
+
+
+                                    <a href="#" title="@evento.Titulo.ToUpper()"><img src="~/storage/evento/@evento.Storage/thumb.jpg" alt="Image" class="img-thumbnail" @*style="max-width: 110%;"*@></a>
+
+                                </div>
+
+                                <div class="col-lg-9 col-md-9" style="padding-right: 40px;padding-top: 5px; padding-bottom: 20px; padding-left:40px">
+
+
+
+                                    <div class="post_info clearfix" style="border-top:none;  padding: 0">
+                                        <div class="post-left">
+                                            <h4 style="">@evento.Titulo</h4>
+
+                                        </div>
+                                    </div>
+
+
+
+                                    <ul style="list-style-type:none; padding:0">
+                                        <li><i class="icon-th-list"></i><strong>Categoria: </strong><span style="color: #3b537b">@evento.CategoriaEvento.DescricaoCategoria</span></li>
+                                        <li><i class="icon-calendar"></i><strong>Quando: </strong><span style="color: #3b537b">@evento.DataEvento</span></li>
+                                        <li><i class="icon-location"></i><strong>Onde: </strong><span style="color: #3b537b">@evento.LocalEvento.NomeLocal</span></li>
+                                        <li><i class="icon-money-2"></i><strong>Quanto: </strong><span style="color: #3b537b">@evento.TipoEvento.DescricaoTipo</span></li>
+                                    </ul>
+
+                                    <a class="btn_1" data-toggle="collapse" data-parent="#accordion" href="#@evento.Id" aria-expanded="false">Detalhes</a>
+                                    @*@Html.ActionLink("Detalhes", "Detalhes", "Eventos", new { id = evento.EventoId, evento = evento.Titulo.Trim().ToSeoUrl() }, new { @class = "btn_1" })*@
+                                    <a href="@evento.Album" target="_blank" class="btn_1 outiline" style="margin-top:5px"><i class="icon-flickr-3" style="margin-top:3px"></i>Veja como foi</a>
+
+
+
+
+                                </div>
+                            </div><!-- end post -->
+                        </div>
+
+
+
+
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+
+                                <div class="panel-group" id="accordion">
+                                    <div class="panel panel-default">
+
+                                        <div id="@evento.Id" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                            <div class="panel-body" style="padding-top: 5px; padding-bottom:5px">
+                                                <div class="post_info clearfix" style="padding: 5px">
+                                                    <div class="main_title" style="margin-bottom: 10px">
+                                                        <h4><span><i class="icon-info-circled-3"></i></span> Detalhes</h4>
+                                                    </div>
+                                                </div>
+
+                                                @Html.Raw(evento.HtmlDetalhes)
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div><!-- end box style -->
+                </div>
+            }
+
+
+            <hr style="margin-bottom: 0px;">
+
+
+            <div class="text-right">
+                <ul class="pagination">
+                    @*@Html.PageLinks(Model.Paginacao, x => Url.Action("ListaEventos", new { categoria = Model.CategoriaAtual, pagina = x }))*@
+                </ul>
+            </div>        <!--end pagination-->
+
+        </div><!-- End col-md-9-->
+
+        <aside class="col-lg-3 col-md-3">
+
+            <div class="widget">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Pesquisar...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" style="margin-left:0;"><i class="icon-search"></i></button>
+                    </span>
+                </div><!-- /input-group -->
+            </div><!-- End Search -->
+
+            <div class="widget" id="cat_blog">
+                <ul>
+                    <li><a href="ListaEventos?categoria=Festa" id="@((Model.CategoriaAtual == "Festa") ? "active" : "")"><i class="icon-left-open"></i>Festas <span>(@Model.ContaCategorias.Where(c => c.CategoriaEvento.DescricaoCategoria == "Festa").Count())</span></a></li>
+                    <li><a href="ListaEventos?categoria=Show" id="@((Model.CategoriaAtual == "Show") ? "active" : "")"><i class="icon-left-open"></i>Shows <span>(@Model.ContaCategorias.Where(c => c.CategoriaEvento.DescricaoCategoria == "Show").Count())</span></a></li>
+                    <li><a href="ListaEventos?categoria=Evento" id="@((Model.CategoriaAtual == "Evento") ? "active" : "")"><i class="icon-left-open"></i>Eventos <span>(@Model.ContaCategorias.Where(c => c.CategoriaEvento.DescricaoCategoria == "Evento").Count())</span></a></li>
+                    <li><a href="ListaEventos?categoria=Outros" id="@((Model.CategoriaAtual == "Outros") ? "active" : "")"><i class="icon-left-open"></i>Outros <span>(@Model.ContaCategorias.Where(c => c.CategoriaEvento.DescricaoCategoria == "Outros").Count())</span></a></li>
+                </ul>
+            </div>
+
+
+            <div class="widget tags" style="margin-top:40px">
+                <h4>Onde Ficar:</h4>
+                @*@foreach (var hotel in Model.Hoteis.Where(s => s.Status == "Ativo" && (s.Nome == "Pousada da Ponte" || s.Nome == "Pousada do Simão")))
+                {
+
+                    @Html.ActionLink(@hotel.Nome, "Detalhes", "Hoteis", new { id = hotel.HotelId, hospedagem = hotel.Nome.Trim().ToSeoUrl() }, new { @target = "_blank" })
+
+                }*@
+            </div><!-- End widget -->
+
+            <div class="box_style_2" style="margin-top:40px">
+                <span class="tape"></span>
+                <i class="icon_set_1_icon-57"></i>
+                <h4>Alguma <span>Dúvida?</span></h4>
+                <a href="tel://004542344599" class="icon-mail-7">meajuda@embritania.com.br</a><br />
+                <a href="tel://6233831462" class="icon-phone-3">(062) 3383-1462</a><br />
+                <small>Todos os dias 8:00 - 23:00 hs</small>
+            </div>
+        </aside><!--End aside -->
+
+
+    </div><!-- End row -->
+</div><!-- End container -->

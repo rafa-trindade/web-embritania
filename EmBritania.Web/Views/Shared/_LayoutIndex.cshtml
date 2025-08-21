@@ -1,0 +1,255 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Portal de turismo da cidade de Britânia, Goiás. Festas, shows, onde ficar, onde comer, onde ir e o que fazer.">
+    <meta name="keywords" content="britânia, eventos, hotel, fotos, vídeos, restaurantes, turismo, britania">
+    <meta name="author" content="TRPrime Tecnologia">
+    <title>EM BRITÂNIA - FESTAS E SHOWS | HOSPEDAGEM | RESTAURANTES | TURISMO</title>
+    <!-- Favicons
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">-->
+    <!-- Google web fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- CSS -->
+    <link href="~/css/base.css" rel="stylesheet">
+    <link href="~/css/tabs_home.css" rel="stylesheet">
+
+    <!-- REVOLUTION SLIDER CSS -->
+    <link href="~/layerslider/css/layerslider.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!--[if lte IE 8]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>.</p>
+    <![endif]-->
+    <div id="preloader">
+        <div class="sk-spinner sk-spinner-wave">
+            <div class="sk-rect1"></div>
+            <div class="sk-rect2"></div>
+            <div class="sk-rect3"></div>
+            <div class="sk-rect4"></div>
+            <div class="sk-rect5"></div>
+        </div>
+    </div>
+    <!-- End Preload -->
+    <div class="layer"></div>
+    <!-- Mobile menu overlay mask -->
+    <!-- Header================================================== -->
+    <header id="plain">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <div id="logo_home">
+                        <h1><a href="/" title="Em Britânia - Bonita por Natureza">Em Britânia - Bonita por Natureza</a></h1>
+                    </div>
+                </div>
+                <nav class="col-md-9 col-sm-9 col-xs-9">
+                    <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span>Menu mobile</span></a>
+
+                    <div class="main-menu">
+                        <div id="header_menu">
+                            <img src="~/img/logo.png" width="160" height="34" alt="Em Britânia" data-retina="true">
+                        </div>
+                        <a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
+                        <ul>
+
+                            @*<li class="submenu">
+                                    <a href="/" class="submenu">Início </a>
+                                </li>*@
+
+                            <li class="submenu">
+                                <a href="~/Eventos/ListaEventos" class="submenu">Festas e Shows </a>
+                            </li>
+
+                            <li class="submenu">
+                                <a href="~/Hoteis/ListaHoteis?categoria=pousada" class="submenu">Hospedagem </a>
+                            </li>
+
+
+                            <li class="submenu">
+                                <a href="javascript:void(0);" class="show-submenu">Gastronomia <i class="icon-down-open-mini"></i></a>
+                                <ul>
+                                    <li><a href="~/Restaurantes/ListaRestaurantes?categoria=restaurante">Restaurantes </a></li>
+                                    <li><a href="~/Restaurantes/ListaRestaurantes?categoria=lanchonete">Lanchonetes </a></li>
+                                    <li><a href="~/Restaurantes/ListaRestaurantes?categoria=bar">Bares </a></li>
+                                    <li><a href="~/Restaurantes/ListaRestaurantes?categoria=outro">Outros </a></li>
+                                </ul>
+                            </li>
+
+                            <li class="submenu">
+                                <a href="javascript:void(0);" class="show-submenu">Turismo <i class="icon-down-open-mini"></i></a>
+                                <ul>
+                                    <li><a href="~/Turismo">Visão Geral </a></li>
+                                    <li><a href="~/Estabelecimentos/ListaEstabelecimentos?categoria=turismo">Serviços </a></li>
+                                </ul>
+                            </li>
+
+                            <li class="submenu">
+                                <a href="javascript:void(0);" class="show-submenu">Comércio <i class="icon-down-open-mini"></i></a>
+                                <ul>
+                                    <li><a href="~/Estabelecimentos/ListaEstabelecimentos?categoria=banco">Bancos / Lotérica</a></li>
+                                    <li><a href="~/Estabelecimentos/ListaEstabelecimentos?categoria=distribuidora">Distrib. de Bebidas </a></li>
+                                    <li><a href="~/Estabelecimentos/ListaEstabelecimentos?categoria=drogaria">Drogarias </a></li>
+                                    <li><a href="~/Estabelecimentos/ListaEstabelecimentos?categoria=servico">Lojas e Serviços </a></li>
+                                    <li><a href="~/Estabelecimentos/ListaEstabelecimentos?categoria=panificadora">Panificadoras </a></li>
+                                    <li><a href="~/Estabelecimentos/ListaEstabelecimentos?categoria=posto">Postos de Gasolina </a></li>
+                                    <li><a href="~/Estabelecimentos/ListaEstabelecimentos?categoria=mercado">Supermercados </a></li>
+                                </ul>
+                            </li>
+
+                            <li class="submenu">
+                                <a href="javascript:void(0);" class="show-submenu"><i class="icon-info-circled-3"></i>Informações <i class="icon-down-open-mini"></i></a>
+                                <ul>
+                                    <li><a href="~/Info">Informações Úteis</a></li>
+                                    <li><a href="~/Info/Privacidade">Termos de Uso</a></li>
+                                    <li><a href="~/Info/Privacidade">Privacidade</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div><!-- End main-menu -->
+
+
+                    <ul id="top_tools">
+                        <li>
+                            <div class="dropdown dropdown-search">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-search"></i></a>
+                                <div class="dropdown-menu">
+                                    <form>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Procurar...">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-default" type="button" style="margin-left:0;">
+                                                    <i class="icon-search"></i>
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div><!-- container -->
+    </header><!-- End Header -->
+
+
+    @RenderBody()
+
+    <footer id="footer_3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4">
+                    <p style="margin: 0"><img src="~/img/logo_footer.png" width="160" height="34" alt="City tours" data-retina="true" id="logo"></p>
+                    <p style="text-align:justify">Descubra Britânia-GO. Tudo que você precisa saber na Cidade do Lago. Nossa atração principal é você!</p>
+                    <div class="fb-page" data-href="https://www.facebook.com/embritania/" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/embritania/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/embritania/">Em Britânia</a></blockquote></div>
+                </div>
+                <div class="col-md-2 col-sm-2">
+                    <h3>+Mais</h3>
+                    <ul style="padding: 0 0 15px 0;">
+                        <li><a href="~/Info">Informações Úteis</a></li>
+                        <li><a href="https://www.flickr.com/photos/137071688@N05/albums" target="_blank">Galeria do Fotos</a></li>
+                    </ul>
+                    <ul style="border-top: 1px dashed rgba(255,255,255,0.2);">
+                        <li><a href="~/Info/Privacidade">Termos de Uso</a></li>
+                        <li><a href="~/Info/Privacidade">Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-2">
+                    <h3>Comunidade</h3>
+                    <ul>
+                        <li><a href="http://britania.go.gov.br">Portal do Município</a></li>
+                        <li><a href="http://facebook.com/diariodebritania">Diário de Britânia</a></li>
+                        <li><a href="http://facebook.com/groups/britaniaempauta">Britânia em Pauta</a></li>
+                        <li style="padding-bottom:1px"><a href="#">Jovens em Ação</a></li>
+                        <li><img src="../../img/logo-lindo-rodape1.png" style="width:130px; margin-top:14px"></li>
+                    </ul>
+
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <h3>Nossa atração principal é você!</h3>
+                    <!-- LightWidget WIDGET -->
+                    <script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/d64acdacb34a5f3297f9087f11def57a.html" id="lightwidget_d64acdacb3" name="lightwidget_d64acdacb3" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden; position:relative"></iframe>
+                </div>
+            </div><!-- End row -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="social_footer">
+                        <ul>
+                            <li><a href="http://facebook.com/embritania"><i class="icon-facebook"></i></a></li>
+                            <li><a href="http://twitter.com/embritania"><i class="icon-twitter"></i></a></li>
+                            <li><a href="http://instagram.com/embritania"><i class="icon-instagram"></i></a></li>
+                            @*<li><a href="#"><i class="icon-youtube-play"></i></a></li>*@
+                        </ul>
+                        <p>© emBritania 2016 - 2017</p>
+                    </div>
+                </div>
+            </div><!-- End row -->
+        </div><!-- End container -->
+    </footer><!-- End footer -->
+
+    <div id="toTop"></div><!-- Back to top button -->
+    <!-- Common scripts -->
+    <script src="~/js/jquery-1.11.2.min.js"></script>
+    <script src="~/js/common_scripts_min.js"></script>
+    <script src="~/js/functions.js"></script>
+
+    <!-- Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdByIefGlXCkKvH_8m3mSZpf_KeMep8D4"></script>
+    <script src="~/js/map_home.js"></script>
+    <script src="~/js/infobox.js"></script>
+
+    <!-- Specific scripts -->
+    <script src="~/layerslider/js/greensock.js"></script>
+    <script src="~/layerslider/js/layerslider.transitions.js"></script>
+    <script src="~/layerslider/js/layerslider.kreaturamedia.jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            'use strict';
+            $('#layerslider').layerSlider({
+                autoStart: true,
+                responsive: true,
+                responsiveUnder: 1280,
+                layersContainer: 1170,
+                skinsPath: 'layerslider/skins/'
+                // Please make sure that you didn't forget to add a comma to the line endings
+                // except the last line!
+            });
+        });
+    </script>
+
+    @RenderSection("script", required: false);
+
+</body>
+</html>

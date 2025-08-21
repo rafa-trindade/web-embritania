@@ -1,0 +1,53 @@
+﻿@model EmBritania.Web.Models.EventosViewModel
+
+
+<section class="parallax-window" data-parallax="scroll" data-image-src="../../img/bg_blog.jpg" data-natural-width="1400" data-natural-height="470">
+    <div class="parallax-content-1">
+        <div class="animated fadeInDown">
+            <h1>GALERIA DE FOTOS</h1>
+            <p>@Model.Evento.Titulo | @Model.Evento.Data</p>
+        </div>
+    </div>
+</section><!-- End Section -->
+
+<div id="position">
+    <div class="container">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Category</a></li>
+            <li>Page active</li>
+        </ul>
+    </div>
+</div><!-- End Position -->
+<div class="container margin_60">
+    <div class="main_title">
+        <h2><span>@Model.Evento.Titulo</span></h2>
+        <p>
+            @Model.Evento.Data | @Model.Evento.Local
+        </p>
+    </div>
+    <hr>
+    <div class="row magnific-gallery add_bottom_60 ">
+
+        @for (int i = 1; i <= Convert.ToInt32(Model.Evento.RedeSocial); i++)
+            {
+
+            <div class="col-md-3 col-sm-3">
+                <div class="img_wrapper_gallery">
+                    <div class="img_container_gallery">
+                        <a href="../../storage/evento/@Model.Evento.Storage/galeria/galeria (@i).jpg" title="Photo title">
+                            <img src="../../storage/evento/@Model.Evento.Storage/galeria/galeria (@i).jpg" alt="Image" class="img-responsive">
+                            <i class="icon-resize-full-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        }
+
+
+    </div><!-- End row -->
+
+
+
+</div><!-- End container -->

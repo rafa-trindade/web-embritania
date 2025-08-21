@@ -1,0 +1,141 @@
+﻿@{
+    Layout = "../Shared/_LayoutIndex.cshtml";
+}
+
+
+@*@model EmBritania.Web.Models.HoteisViewModel*@
+
+<!-- Slider -->
+<div id="full-slider-wrapper" style="margin-top: 60px;">
+    <div id="layerslider" style="width:100%;height:470px;">
+        <!-- first slide -->
+        <div class="ls-slide" data-ls="slidedelay: 5000; transition2d:5;">
+            <img src="~/img/header-index1.jpg" class="ls-bg" alt="Slide background" style="margin-top: 0px;">
+            <h3 class="ls-l slide_typo" style="top: 45%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;">Fique por dentro: Agenda</h3>
+            <p class="ls-l slide_typo_2" style="top:52%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;">Festas / Shows / Eventos</p>
+            <a class="ls-l button_intro_2 outline" style="top:280px; left:50%;white-space: nowrap;" data-ls="durationin:2000;delayin:1400;easingin:easeOutElastic;" href='~/Eventos/ListaEventos'>Confira</a>
+        </div>
+
+        <!-- second slide -->
+        <div class="ls-slide" data-ls="slidedelay: 5000; transition2d:85;">
+            <img src="img/header-index1.jpg" class="ls-bg" alt="Slide background">
+            <h3 class="ls-l slide_typo" style="top: 45%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;">Em Britânia: Onde Ficar</h3>
+            <p class="ls-l slide_typo_2" style="top:52%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;">Hotéis / Pousadas / Acampamentos</p>
+            <a class="ls-l button_intro_2 outline" style="top:280px; left:50%;white-space: nowrap;" data-ls="durationin:2000;delayin:1400;easingin:easeOutElastic;" href='~/Hoteis/ListaHoteis?categoria=pousada'>Conheça</a>
+        </div>
+
+        <!-- second slide -->
+        <div class="ls-slide" data-ls="slidedelay: 5000; transition2d:85;">
+            <img src="img/header-index1.jpg" class="ls-bg" alt="Slide background">
+            <h3 class="ls-l slide_typo" style="top: 45%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;">Em Britânia: Onde Comer</h3>
+            <p class="ls-l slide_typo_2" style="top:52%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;">Restaurantes / Lanchonetes / Bares</p>
+            <a class="ls-l button_intro_2 outline" style="top:280px; left:50%;white-space: nowrap;" data-ls="durationin:2000;delayin:1400;easingin:easeOutElastic;" href='~/Restaurantes/ListaRestaurantes'>Detalhes</a>
+        </div>
+
+    </div>
+</div><!-- End layerslider -->
+
+
+<div id="position">
+    <div class="container">
+        <ul>
+            <li>@Html.ActionLink("Em Britânia", "Index", "Home")</li>
+            <li>Página Inicial</li>
+
+        </ul>
+    </div>
+</div><!-- End Position -->
+<div class="container margin_60" style="margin-bottom:-40px">
+    <div class="main_title">
+        <h2>Conheça <span>Britânia-GO</span></h2>
+        <p>
+            Nossa atração principal é <span>você</span>!
+        </p>
+    </div>
+    <hr>
+    <div class="row">
+
+        <!-- SnapWidget -->
+        <iframe src="https://snapwidget.com/embed/431206" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; position:relative; overflow:hidden; width:100%; height:125px; margin-bottom:-5px; border:5px solid#fff; -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1); -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1); box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);"></iframe>
+
+        <div class="col-md-5 col-sm-6">
+            <img src="~/img/home-img-01.png" alt="Image" class="img-responsive" style="max-width: 100%; margin-top:45px">
+        </div>
+        <div class="col-md-7  col-sm-6">
+            <h3>Um pouco da <span>História</span> </h3>
+            <p style="text-align:justify;">
+                Foi navegando pelas águas cristalinas e calmas do Lago dos Tigres que os primeiros moradores chegaram a região, onde hoje é o município de Britânia (nome dado pela grande semelhança do município, em seus aspectos geográficos e hidrográficos, com as Ilhas Britânicas). Isso aconteceu em meados da década de 50 e logo o pequeno povoado cresceu, mas com um diferencial, preservando o cerrado existente na região.
+            </p>
+            <p style="text-align:justify;">
+                O Lago dos Tigres é o principal cartão postal de Britânia, mas a cidade possui muito mais. Uma cidade traquila. Por aqui, não existe estresse.
+            </p>
+
+            <h3>Britânia - <span>Cidade do Lago</span> </h3>
+
+            <p style="text-align:justify;">
+                Engana-se quem pensa que Britânia, Cidade do Lago, se resume a Pecuária e Agricultura. Emoldurada pelo Lago dos Tigres, o maior lago natural da América Latina, a cidade oferece uma gama de passeios e eventos que engrandecem o Turismo da cidade.
+            </p>
+
+            <div class="general_icons">
+                <img src="~/img/icones/sol.png" />
+                <img src="~/img/icones/sandalia.png" />
+                <img src="~/img/icones/oculos.png" />
+                <img src="~/img/icones/fotografia.png" />
+                <img src="~/img/icones/mochila.png" />
+                <img src="~/img/icones/barraca.png" />
+
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+    <!-- End row -->
+
+
+</div><!-- End container -->
+@*<div class="banner"></div>*@
+
+
+
+
+<div id="map" class="map"></div><!-- End map -->
+
+
+
+
+<div class="white_bg">
+    <div class="container margin_60">
+        <div class="main_title">
+            <h2><span>Onde Ficar</span> em Britânia</h2>
+            <p>
+                Encotre o melhor lugar para se hospedar na Cidade do Lago
+            </p>
+        </div>
+        <div id="tabs" class="tabs">
+            <nav>
+                <ul>
+                    <li><a href="#section-1" class="icon_set_1_icon-23"><span>Hotéis/Pousadas</span></a></li>
+                    <li><a href="#section-2" class="icon_set_1_icon-30"><span>Camping</span></a></li>
+                    <li><a href="#section-3" class="icon_set_1_icon-64"><span>Casas para Temporada</span></a></li>
+                </ul>
+            </nav>
+            <div class="content">
+       
+                @*adicionar foreach hoteis*@
+
+
+            </div><!-- /content -->
+        </div><!-- End tabs -->
+
+    </div><!-- End container -->
+</div><!-- End white_bg -->
+
+
+
+
+@Scripts.Render(
+    "~/js/tabs.js")
+<script>new CBPFWTabs(document.getElementById('tabs'));</script>
