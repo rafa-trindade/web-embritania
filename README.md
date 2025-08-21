@@ -9,7 +9,7 @@ Na época, atuava como empreendedor no ramo de hotelaria e alimentação na cida
 O projeto foi criado como uma iniciativa pessoal para promover o turismo da cidade e incentivar o comércio local.  
 Apesar de não estar mais em produção, representa um marco importante no portfólio de desenvolvimento e também como um case de estratégia empresarial.  
 
-O portal serviu como ferramenta de marketing, ampliando a visibilidade do restaurante e hotel, além de fortalecer o ecossistema de comércio local.  
+O portal serviu como ferramenta de marketing, ampliando a visibilidade do restaurante e hotel, além de fortalecer o ecossistema de tursimo local.  
 
 ## Funcionalidades
 
