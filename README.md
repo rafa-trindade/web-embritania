@@ -31,10 +31,10 @@ O portal serviu como ferramenta de marketing, ampliando a visibilidade do restau
 ## Imagens do Projeto
 
 ### Página Inicial
-![Página Inicial](docs/home.png)
+![Página Inicial](docs/home_v2.png)
 
 ### Página de Hospedagem
-![Página de Hospedagem](docs/hospedagem.png)
+![Página de Hospedagem](docs/hospedagem_v2.png)
 
 ###  Visualização Histórica
 
